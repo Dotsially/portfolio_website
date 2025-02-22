@@ -22,7 +22,7 @@ function set_project_languages(column_div, projects, i){
 }
 
 async function main(){
-    const response  = await fetch("/resources/data/projects.json")
+    const response  = await fetch("resources/data/projects.json")
     const json_string = await response.json()
     const projects = json_string["projects"]
 
