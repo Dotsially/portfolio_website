@@ -24,8 +24,12 @@ a:hover > .gif{
     filter: blur(3px);
 }
 
-a:hover > .blurred_image{
-    filter: blur(2px);
+a:hover > .cut_image{
+    filter: blur(3px);
+}
+
+a:hover > .cut_gif{
+    filter: blur(3px);
 }
 
 .column:hover .hover_text{
@@ -49,10 +53,6 @@ a:hover > .blurred_image{
 .hover_text{
     text-align: center;
     font-size: 18px;
-}
-
-i{
-    font-size: 30px;
 }
 
 .row{
