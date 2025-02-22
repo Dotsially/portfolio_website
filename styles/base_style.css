@@ -16,6 +16,10 @@ a:visited{
     color: #e8e6e3;
 }
 
+.header_button{
+    color: #e8e6e3;
+}
+
 a:hover > .still_image{
     filter: blur(3px);
 }

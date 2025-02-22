@@ -14,12 +14,14 @@ function main(){
     const first_button = document.createElement("button");
     first_button.type = "button";
     first_button.innerText = "HOME";
+    first_button.className ="header_button";
     first_button.onclick = to_home;
     
 
     const second_button = document.createElement("button");
     second_button.type = "button";
     second_button.innerText = "PROJECTS";
+    second_button.className ="header_button";
     second_button.onclick = to_projects ;
 
     document.body.append(header);
