@@ -38,6 +38,10 @@ function set_project_languages(column_div, projects, i){
         if(j == 0){
             img_language.classList.add("img_push");
         }
+        if(j == languages.length-1){
+            img_language.classList.add("img_last");
+        }
+        
         language_div.appendChild(img_language);
     }
 

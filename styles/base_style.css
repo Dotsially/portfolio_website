@@ -136,20 +136,30 @@
     text-decoration: underline;
 }
 
-.language_div{
+.language_div {
+    background-color: #330A4F;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     text-align: center;
     color: #e8e6e3;
+    border-radius: 1%;
+}
+.language_div p{
+    margin-left: 5px;
+    background-color: #330A4F;
 }
 .language_div img{
+    background-color: #330A4F;
     align-self: center;
 }
 
 .language_div .img_push{
-    margin-left: auto;
-    align-self: center;
+    margin-left: auto;  
+}
+
+.language_div .img_last{
+    margin-right: 5px;
 }
 
 
