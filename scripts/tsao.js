@@ -4,7 +4,7 @@ function main(){
     main_div.className = "main_page"; 
 
     const thumbnail = document.createElement("img");
-    thumbnail.src = "https://play-lh.googleusercontent.com/Uf0CkIlCne6JfuEHFr-LFX4zNSV6HnP1N7zqp8mOI3Ym860bsU37uMSsssh6g7VTQl1v=w1052-h592";
+    thumbnail.src = "resources/images/tsao.gif";
     thumbnail.className = "thumbnail";
 
     const title = document.createElement("h1");

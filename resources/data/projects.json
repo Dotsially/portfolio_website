@@ -12,7 +12,7 @@
         {
             "name" : "To Slay An Oni",
             "url" : "tsao.html",
-            "image": "https://play-lh.googleusercontent.com/Uf0CkIlCne6JfuEHFr-LFX4zNSV6HnP1N7zqp8mOI3Ym860bsU37uMSsssh6g7VTQl1v=w1052-h592",
+            "image": "resources/images/tsao.gif",
             "image_class" : "cut_image",
             "languages" : ["C#"],
             "type" : "released"
