@@ -50,20 +50,20 @@
             "type" : "hobby"
         },
         {
-            "name" : "This website!",
-            "url" : "https://github.com/Dotsially/portfolio_website",
-            "image": "resources/images/screen_shot.png",
-            "image_class" : "cut_image",
-            "languages" : ["HTML", "CSS","JavaScript"],
-            "type" : "hobby"
-        },
-        {
             "name" : "Java raycaster",
             "url" : "https://github.com/Dotsially/java_raycaster",
             "image": "https://user-images.githubusercontent.com/60740181/227783553-35e143c6-f04b-4880-b9fa-396af5eb894e.gif",
             "image_class" : "gif",
             "languages" : ["Java"],
             "type" : "school"
-        }   
+        },
+        {
+            "name" : "This website!",
+            "url" : "https://github.com/Dotsially/portfolio_website",
+            "image": "resources/images/screen_shot.png",
+            "image_class" : "cut_image",
+            "languages" : ["HTML", "CSS","JavaScript"],
+            "type" : "hobby"
+        }  
     ]
 }

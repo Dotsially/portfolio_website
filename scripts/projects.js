@@ -87,7 +87,7 @@ function CreateDesktopPage(main_page_div, projects){
         row_div.className = "row";
         
         for(let j = 0; j < 3; j++){
-            const current_project = j+project_count;
+            const current_project = j+i*3;
             if(current_project == project_amount) break;
 
             const column_div = document.createElement("div");
