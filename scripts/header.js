@@ -1,32 +1,68 @@
 
-function to_home(){
-    window.location.href = "index.html";
+function onLinkClick(element) {
+    console.log(element.id);
+    localStorage.setItem("current_active", element.id);
+    window.location.href = element.href;
 }
 
-function to_projects(){
-    window.location.href = "projects.html";
-}
+function header_main(){
+    const header_div = document.createElement("div");
+    header_div.className = "header_div";
 
-function main(){
-    const header = document.createElement("h1");
-    header.innerText = "Dotsially's Portfolio"
+    const pages_div = document.createElement("div");
+    pages_div.className = "pages_div"
 
-    const first_button = document.createElement("button");
-    first_button.type = "button";
-    first_button.innerText = "HOME";
-    first_button.className ="header_button";
-    first_button.onclick = to_home;
+    const title = document.createElement("h1");
+    title.innerText = "Dotsially's Portfolio"
+
+    const home = document.createElement("a");
+    home.className ="header_link";
+    home.id = "home";
+    home.href ="index.html";
+    home.addEventListener('click', (e) => {
+        e.preventDefault();
+        onLinkClick(home);
+    });
+    const home_text = document.createElement("p");
+    home_text.innerText ="HOME";
+    home.appendChild(home_text);
+
+    const projects = document.createElement("a");
+    projects.className ="header_link";
+    projects.id = "projects"
+    projects.href ="projects.html";
+    projects.addEventListener('click', (e) => {
+            e.preventDefault();
+            onLinkClick(projects);
+    });
+    const project_text = document.createElement("p");
+    project_text.innerText ="PROJECTS";
+    projects.appendChild(project_text);
+
     
+    header_div.appendChild(title);
 
-    const second_button = document.createElement("button");
-    second_button.type = "button";
-    second_button.innerText = "PROJECTS";
-    second_button.className ="header_button";
-    second_button.onclick = to_projects ;
+    pages_div.appendChild(home);
+    pages_div.appendChild(projects);
+    header_div.appendChild(title);
+    header_div.appendChild(pages_div);
 
-    document.body.append(header);
-    document.body.append(first_button);
-    document.body.append(second_button);
+    const contrast_div = document.createElement("div");
+    contrast_div.className = "header_constrast";
+    header_div.appendChild(contrast_div);
+
+    document.body.append(header_div);
 }
 
-main();
+window.onload = function(){
+    const active = document.getElementById(localStorage.getItem("current_active"));
+    if(active){
+        console.log(active.id);
+        active.className = "header_link_active";
+    }
+    else{
+        home.className = "header_link_active";
+    }
+}
+
+header_main();
