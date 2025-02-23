@@ -1,7 +1,7 @@
 
 function onLinkClick(element) {
     console.log(element.id);
-    localStorage.setItem("current_active", element.id);
+    sessionStorage.setItem("current_active", element.id);
     if(element.target == "new"){
         window.open(element.href);
     }
@@ -55,13 +55,17 @@ function header_main(){
 }
 
 window.onload = function(){
-    const active = document.getElementById(localStorage.getItem("current_active"));
-    if(active){
-        console.log(active.id);
-        active.className = "header_link_active";
+    var active;
+    if (sessionStorage.getItem("hasCodeRunBefore") === null) {
+        sessionStorage.setItem("hasCodeRunBefore", true);
+        active = document.getElementById("HOME");
     }
     else{
-        home.className = "header_link_active";
+        active = document.getElementById(sessionStorage.getItem("current_active"));
+    }
+
+    if(active){
+        active.className = "header_link_active";
     }
 }
 
