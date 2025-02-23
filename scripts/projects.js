@@ -124,14 +124,4 @@ async function main(){
     document.body.append(main_page_div);
 }
 
-
-// function onScreenResize(){
-//     document.body.innerHTML = "";
-//     $(document).ready(function() {
-//         header_main();
-//       });
-//     main();
-// }
-
 main();
-//window.addEventListener('resize', onScreenResize);

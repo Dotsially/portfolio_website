@@ -6,56 +6,64 @@
             "url" : "https://store.steampowered.com/app/3380820/ReSpaced/",
             "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3380820/extras/Untitled_video_-_Made_with_Clipchamp__8_.gif?t=1738518895",
             "image_class" : "gif",
-            "languages" : ["C#"]
+            "languages" : ["C#"],
+            "type" : "released"
         },
         {
             "name" : "To Slay An Oni",
             "url" : "https://5lashstudios.itch.io/tsao",
             "image": "https://play-lh.googleusercontent.com/Uf0CkIlCne6JfuEHFr-LFX4zNSV6HnP1N7zqp8mOI3Ym860bsU37uMSsssh6g7VTQl1v=w1052-h592",
             "image_class" : "cut_image",
-            "languages" : ["C#"]
+            "languages" : ["C#"],
+            "type" : "released"
         },
         {
             "name" : "Creation Voxel Engine",
             "url" : "https://github.com/Dotsially/project_creation",
             "image": "https://github.com/user-attachments/assets/588bdab1-290c-4679-a7ce-f0068c76dc9c",
             "image_class" : "gif",
-            "languages" : ["C++"]
+            "languages" : ["C++"],
+            "type" : "hobby"
         },
         {
             "name" : "Odin Voxel Project",
             "url" : "https://github.com/Dotsially/odin_voxel_project",
             "image": "https://user-images.githubusercontent.com/60740181/226722737-d1c928dd-29e0-4d3e-aeb3-494a446acf41.gif",
             "image_class" : "gif",
-            "languages" : ["Odin"]
+            "languages" : ["Odin"],
+            "type" : "hobby"
         },
         {
             "name" : "Thirdperson character controller",
             "url" : "https://github.com/Dotsially/raylib_thirdperson_controller",
             "image": "https://user-images.githubusercontent.com/60740181/210362255-6dd26f39-cb90-4058-affa-b3d705e1e0ba.gif",
             "image_class" : "gif",
-            "languages" : ["C"]
+            "languages" : ["C"],
+            "type" : "hobby"
         },
         {
             "name" : "Idle Botanist",
             "url" : "https://github.com/Dotsially/idle_botanist",
             "image": "https://user-images.githubusercontent.com/60740181/220949970-7209c640-38b6-4e23-b3ad-bb916764ba5c.png",
             "image_class" : "still_image",
-            "languages" : ["C"]
+            "languages" : ["C"],
+            "type" : "hobby"
         },
         {
             "name" : "This website!",
             "url" : "https://github.com/Dotsially/portfolio_website",
             "image": "resources/images/screen_shot.png",
             "image_class" : "cut_image",
-            "languages" : ["HTML", "CSS","JavaScript"]
+            "languages" : ["HTML", "CSS","JavaScript"],
+            "type" : "hobby"
         },
         {
             "name" : "Java raycaster",
             "url" : "https://github.com/Dotsially/java_raycaster",
             "image": "https://user-images.githubusercontent.com/60740181/227783553-35e143c6-f04b-4880-b9fa-396af5eb894e.gif",
             "image_class" : "gif",
-            "languages" : ["Java"]
+            "languages" : ["Java"],
+            "type" : "school"
         }   
     ]
 }
