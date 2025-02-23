@@ -21,13 +21,23 @@ var languages_dictionary = {
 function set_project_languages(column_div, projects, i){
     const languages = projects[i].languages;
     const language_div = document.createElement("div");
-    
+    language_div.className = "language_div";
+
+    const text = document.createElement("p");
+    text.innerText = "Languages:";
+
+    language_div.appendChild(text);
+
     for(let j = 0; j < languages.length; j++){
         const img_language = document.createElement("img");
         img_language.src = languages_dictionary[languages[j]];
         let image_size = 30;
         img_language.width = image_size;
         img_language.height = image_size;
+
+        if(j == 0){
+            img_language.classList.add("img_push");
+        }
         language_div.appendChild(img_language);
     }
 

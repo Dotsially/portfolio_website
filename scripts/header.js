@@ -2,14 +2,20 @@
 function onLinkClick(element) {
     console.log(element.id);
     localStorage.setItem("current_active", element.id);
-    window.location.href = element.href;
+    if(element.target == "new"){
+        window.open(element.href);
+    }
+    else{  
+        window.location.href = element.href;    
+    }
 }
 
-function createButton(id, href){
+function createButton(id, href, target){
     const button = document.createElement("a");
     button.className ="header_link";
     button.id = id;
-    button.href =href;
+    button.target = target;
+    button.href = href;
     button.addEventListener('click', (e) => {
         e.preventDefault();
         onLinkClick(button);
@@ -30,16 +36,15 @@ function header_main(){
     const button_div = document.createElement("div");
     button_div.className = "buttons_div"
 
-    const home_button = createButton("HOME", "index.html");
-    const about_button = createButton("ABOUT ME", "about.html");
-    const project_button = createButton("PROJECTS", "projects.html");
+    const home_button = createButton("HOME", "index.html", "self");
+    const github_button = createButton("GITHUB", "https://github.com/Dotsially", "new");
+    const project_button = createButton("PROJECTS", "projects.html", "self");
     
     header_div.appendChild(title);
 
     button_div.appendChild(home_button);
-    button_div.appendChild(about_button);
-
     button_div.appendChild(project_button);
+    button_div.appendChild(github_button);
     header_div.appendChild(button_div);
 
     const contrast_div = document.createElement("div");

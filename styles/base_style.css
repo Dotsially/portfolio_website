@@ -62,7 +62,7 @@
 }
 
 .about_text{
-    margin-top: 9%;
+    margin-top: 5%;
     color: #e8e6e3;
 }
 
@@ -132,6 +132,44 @@
     filter: blur(3px);
 }
 
-.column:hover .hover_text{
+.column .hover_text:hover, .column a:hover{
     text-decoration: underline;
+}
+
+.language_div{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: center;
+    color: #e8e6e3;
+}
+.language_div img{
+    align-self: center;
+}
+
+.language_div .img_push{
+    margin-left: auto;
+    align-self: center;
+}
+
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
 }
