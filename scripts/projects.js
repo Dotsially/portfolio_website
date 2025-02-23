@@ -41,7 +41,7 @@ function set_project_languages(column_div, projects, i){
         if(j == languages.length-1){
             img_language.classList.add("img_last");
         }
-        
+
         language_div.appendChild(img_language);
     }
 
