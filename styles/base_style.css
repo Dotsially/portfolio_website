@@ -60,10 +60,45 @@
 
 .main_page{
     margin-top: 110px;
+    color: #e8e6e3;
+}
+
+.project_title{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    text-align: center;
+    color: #e8e6e3;
+}
+
+.project_header{
+    margin-left: 20px;
+}
+
+.project_text{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.img_bts{
+    margin-left: 20px;
+    width: fit-content;
+    height: 400px;
+}
+
+.thumbnail{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: auto;
+    height: auto;
+    object-fit: fill;
 }
 
 .about_text{
-    margin-top: 5%;
+    margin-top: 20px;
     color: #e8e6e3;
 }
 
