@@ -14,13 +14,11 @@
 }
 
 .header_div h1{
-    padding-top: 0.1%;
+    padding-top: 2px;
     color: #e8e6e3;
     margin: auto;
-    padding: 0%;
     background-color: #7B00CE;
-    padding: 0.5%;
-    z-index: 100;
+    padding-bottom: 3px;
 }
 
 .header_div .buttons_div{
@@ -30,8 +28,7 @@
 
 .header_constrast{
     background-color: #330A4F;
-    display: flex;
-    padding-top: 0.5%;
+    padding-top: 5px;
 }
 .buttons_div .header_link, .buttons_div .header_link_active{
     display: flex;
@@ -62,11 +59,11 @@
 
 .main_page{
     margin-top: 110px;
-    color: #e8e6e3;;
 }
 
 .about_text{
     margin-top: 9%;
+    color: #e8e6e3;
 }
 
 .still_image, .gif, .blurred_image{
