@@ -57,7 +57,7 @@ function CreateMobilePage(main_page_div, projects){
 
         const project_hyperlink = document.createElement("a");
         project_hyperlink.href = projects[i].url;
-        project_hyperlink.target = projects[i].target;
+        project_hyperlink.target = "_self";
 
         const project_thumbnail = document.createElement("img");
         project_thumbnail.className = projects[i].image_class;
