@@ -36,14 +36,12 @@ function header_main(){
     const button_div = document.createElement("div");
     button_div.className = "buttons_div"
 
-    const home_button = createButton("HOME", "index.html", "self");
+    const home_button = createButton("PROJECTS", "index.html", "self");
     const github_button = createButton("GITHUB", "https://github.com/Dotsially", "new");
-    const project_button = createButton("PROJECTS", "projects.html", "self");
     
     header_div.appendChild(title);
 
     button_div.appendChild(home_button);
-    button_div.appendChild(project_button);
     button_div.appendChild(github_button);
     header_div.appendChild(button_div);
 
@@ -58,7 +56,7 @@ window.onload = function(){
     var active;
     if (sessionStorage.getItem("hasCodeRunBefore") === null) {
         sessionStorage.setItem("hasCodeRunBefore", true);
-        active = document.getElementById("HOME");
+        active = document.getElementById("PROJECTS");
     }
     else{
         active = document.getElementById(sessionStorage.getItem("current_active"));

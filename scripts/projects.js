@@ -57,7 +57,7 @@ function CreateMobilePage(main_page_div, projects){
 
         const project_hyperlink = document.createElement("a");
         project_hyperlink.href = projects[i].url;
-        project_hyperlink.target = "_blank";
+        project_hyperlink.target = projects[i].target;
 
         const project_thumbnail = document.createElement("img");
         project_thumbnail.className = projects[i].image_class;
@@ -95,7 +95,7 @@ function CreateDesktopPage(main_page_div, projects){
     
             const project_hyperlink = document.createElement("a");
             project_hyperlink.href = projects[current_project].url;
-            project_hyperlink.target = "_blank";
+            project_hyperlink.target = projects[i].target;
     
             const project_thumbnail = document.createElement("img");
             project_thumbnail.className = projects[current_project].image_class;
@@ -126,6 +126,17 @@ async function main(){
 
     const main_page_div = document.createElement("div");
     main_page_div.className = "main_page";
+
+    const about_text =document.createElement("h1");
+    about_text.innerText = "About Me";
+    about_text.className = "about_header";
+
+    const text = document.createElement("p");
+    text.innerText = "Game developer and Computer engineering student. I'm a huge fan of voxels, low level programming and retro games. \n All my projects bellow!"
+    text.className = "about_text";
+
+    main_page_div.appendChild(about_text);
+    main_page_div.appendChild(text);
 
     if(isMobile() || hasSmallScreen()){
         CreateMobilePage(main_page_div, projects);
