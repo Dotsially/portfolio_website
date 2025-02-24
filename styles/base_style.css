@@ -80,6 +80,29 @@
     margin-left: 20px;
     margin-right: 20px;
 }
+.store_div{
+    margin-top: 30px;
+    margin-bottom : 30px;
+}
+
+.store_page, .store_page:visited{
+    display: inline;
+    margin-top: 100px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    background-color: #7B00CE;
+    padding: 20px;
+    border-radius: 5px;
+    color: #e8e6e3;
+    text-decoration: none;
+}
+
+.store_page:hover{
+    background-color: #330A4F;
+    padding: 20px;
+    border-radius: 5px;
+    color: #e8e6e3;
+}
 
 .img_bts{
     margin-left: 20px;

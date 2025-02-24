@@ -25,6 +25,16 @@ function main(){
     "<li>C#</li>" +
     "</ul>";
 
+
+    const store_div = document.createElement("div");
+    store_div.className = "store_div";
+
+    const store_page = document.createElement("a");
+    store_page.href = "https://store.steampowered.com/app/3380820/ReSpaced/";
+    store_page.target = "_blank";
+    store_page.innerText = "Steam Page";
+    store_page.className = "store_page";
+
     const devcomment = document.createElement("h1");
     devcomment.innerText = "Dev Commentary";  
     devcomment.className = "project_header";
@@ -62,6 +72,8 @@ function main(){
     main_div.appendChild(thumbnail);
     main_div.appendChild(about);
     main_div.appendChild(about_text);
+    store_div.appendChild(store_page);
+    main_div.appendChild(store_div);
     main_div.appendChild(devcomment);
     main_div.appendChild(text);
     main_div.appendChild(img_bts);

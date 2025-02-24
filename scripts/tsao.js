@@ -21,8 +21,23 @@ function main(){
     "<br></br>Made with: " +
     "<ul>" +
     "<li>Unity</li>" +
+    "<li>Blender</li>" +
     "<li>C#</li>" +
     "</ul>";
+
+    const store_div = document.createElement("div");
+    store_div.className = "store_div";
+    const store_page = document.createElement("a");
+    store_page.href = "https://5lashstudios.itch.io/tsao";
+    store_page.target = "_blank";
+    store_page.innerText = "itch.io Page";
+    store_page.className = "store_page";
+
+    const store_page2 = document.createElement("a");
+    store_page2.href = "https://play.google.com/store/apps/details?id=com.slashstudios.tsao&hl=en";
+    store_page2.target = "_blank";
+    store_page2.innerText = "Google Play";
+    store_page2.className = "store_page";
 
     const devcomment = document.createElement("h1");
     devcomment.innerText = "Dev Commentary";  
@@ -32,9 +47,8 @@ function main(){
     const text = document.createElement("p");
     text.innerText = "A project mainly inspired by Vampire Survivors. I was the Artist / Technical Artist on the team but I also did quite a bit of programming\n" +
     "I worked on the sound effect system, particles, enemy wave spawning, game feel and wrote quite a few shaders. \n" +
-    "Outside of that ALL the art in the game was created by me. I used a pixelation shader in blender to render models into sprites sheets. " +
-    "This workflow was so fast I managed to create a lot of assets in 6 weeks! \n" +
-    "I was also the one that came with the idea for a web version for the itch.io page ;)";
+    "Outside of that ALL the art in the game was created by me. I used a pixelation shader in Blender to render models into sprites sheets. \n" +
+    "This workflow was so fast I managed to create a lot of assets in 6 weeks! \n";
     text.className = "project_text";
 
     const img_bts = document.createElement("img");
@@ -45,6 +59,9 @@ function main(){
     main_div.appendChild(thumbnail);
     main_div.appendChild(about);
     main_div.appendChild(about_text);
+    store_div.appendChild(store_page);
+    store_div.appendChild(store_page2);
+    main_div.appendChild(store_div);
     main_div.appendChild(devcomment);
     main_div.appendChild(text);
     main_div.appendChild(img_bts);

@@ -132,7 +132,7 @@ async function main(){
     about_text.className = "about_header";
 
     const text = document.createElement("p");
-    text.innerText = "Game developer and Computer engineering student. I'm a huge fan of voxels, low level programming and retro games. \n All my projects bellow!"
+    text.innerText = "Game developer and Computer engineering student. I'm a huge fan of voxels, low level programming and retro games. \n All my projects below!"
     text.className = "about_text";
 
     main_page_div.appendChild(about_text);
