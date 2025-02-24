@@ -18,7 +18,7 @@ function main(){
 
     const about_text = document.createElement("p");
     about_text.className = "project_text";
-    about_text.innerHTML = "ReSpaced is a fast-paced first-person shooter where you master gun recoil to leap across platforms, battle various enemies, and upgrade your weapon to escape an overrun space station." +
+    about_text.innerHTML = "ReSpaced is a fast-paced first-person shooter where you master gun recoil to leap across platforms, battle various enemies, and upgrade your weapon to escape an overrun space station. <br>It currently has over 4000 downloads!</br>" +
     "<br></br>Made with: " +
     "<ul>" +
     "<li>Unity</li>" +
@@ -39,7 +39,6 @@ function main(){
     devcomment.innerText = "Dev Commentary";  
     devcomment.className = "project_header";
 
-
     const text = document.createElement("p");
     text.innerHTML = "I worked on ReSpaced as a Developer. Elevated Ants was a studio created solely for our minor Game Design & Development." +
     "<br>While it was a studio that only consisted of students we all worked hard as professionals on this title. </br>" +    
@@ -57,8 +56,8 @@ function main(){
     " <li>Worked on the gun recoil mechanics.</li>" +
     " <li>And of course a lot of bug fixes and refactoring...</li>" +
     "</ul>" +
-    "I learned a lot during the development of ReSpaced and I'm super grateful to have been surrounded by such talented people in the team \n" +
-    "The game would have been finished without the entire team giving it their all! <br></br>" +
+    "I learned a lot during the development of ReSpaced and I'm super grateful to have been surrounded by such talented people in the team. " +
+    "<br>The game wouldn't have been finished without the entire team giving it their all! </br>" +
     "<br>One of the biggest things I've struggled with was implementing the final boss. I wanted it to be fun but also challenging. </br>" +
     "The final boss was designed and implemented 3 weeks before our release deadline. I made many prototypes but none of them were fun to fight against." +
     "<br>Due to time constraints I had to settle with the one we have now. While he's not the most challenging version of the boss he's definitely the coolest looking.</br>";
