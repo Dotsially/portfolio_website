@@ -47,15 +47,6 @@
             "target" : "_blank"
         },
         {
-            "name" : "Thirdperson character controller",
-            "url" : "https://github.com/Dotsially/raylib_thirdperson_controller",
-            "image": "https://user-images.githubusercontent.com/60740181/210362255-6dd26f39-cb90-4058-affa-b3d705e1e0ba.gif",
-            "image_class" : "gif",
-            "languages" : ["C"],
-            "type" : "hobby",
-            "target" : "_blank"
-        },
-        {
             "name" : "Idle Botanist",
             "url" : "https://github.com/Dotsially/idle_botanist",
             "image": "https://user-images.githubusercontent.com/60740181/220949970-7209c640-38b6-4e23-b3ad-bb916764ba5c.png",
