@@ -24,8 +24,8 @@ function header_main(){
     const button_div = document.createElement("div");
     button_div.className = "buttons_div";
 
-    const home_button = createButton("PROJECTS", "projects.html", "self");
-    const github_button = createButton("GITHUB", "https://github.com/Dotsially", "new");
+    const home_button = createButton("PROJECTS", "projects.html", "_self");
+    const github_button = createButton("GITHUB", "https://github.com/Dotsially", "_blank");
     
     header_div.appendChild(title);
 
