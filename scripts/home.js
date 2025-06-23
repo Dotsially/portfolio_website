@@ -1,19 +1,18 @@
 
-//UNUSED FOR NOW
+
 function main(){
-    const main_div = document.createElement("div");
-    main_div.className = "main_page"; 
 
-    const about_text =document.createElement("h1");
-    about_text.innerText = "About Me";
-    about_text.className = "about_header";
 
-    const text = document.createElement("p");
-    text.innerText = "Game developer and Computer engineering student. I'm a huge fan of voxels, low level programming and retro games. \n Check the projects tab for all my work!"
+    const home_div = document.createElement("div");
+    home_div.className = "home_page";
+    
+    const home_img = document.createElement("img");
+    home_img.className = "home_image";
+    home_img.src = "resources/images/thumbnail.png"
 
-    main_div.appendChild(about_text);
-    main_div.appendChild(text);
-    document.body.append(main_div); 
+    home_div.append(home_img);
+
+    document.body.append(home_div); 
 }
 
 main();

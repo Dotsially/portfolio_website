@@ -1,13 +1,4 @@
-function isMobile() {
-    var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
-    return isMobile;
-}
-
-function hasSmallScreen(){
-    return window.innerWidth < 700;
-}
-
-var languages_dictionary = {
+const languages_dictionary = {
     "C" : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg",
     "C#" : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg",
     "C++" : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg",
@@ -18,46 +9,33 @@ var languages_dictionary = {
     "Odin": "https://plugins.jetbrains.com/files/22933/681982/icon/default.png"
 };
 
-function set_project_languages(column_div, projects, i){
-    const languages = projects[i].languages;
+function createLanguageDiv(languages) {
     const language_div = document.createElement("div");
     language_div.className = "language_div";
 
     const text = document.createElement("p");
     text.innerText = "Languages:";
-
     language_div.appendChild(text);
 
-    for(let j = 0; j < languages.length; j++){
+    for (let j = 0; j < languages.length; j++) {
         const img_language = document.createElement("img");
         img_language.src = languages_dictionary[languages[j]];
-        let image_size = 30;
-        img_language.width = image_size;
-        img_language.height = image_size;
+        img_language.width = 30;
+        img_language.height = 30;
 
-        if(j == 0){
-            img_language.classList.add("img_push");
-        }
-        if(j == languages.length-1){
-            img_language.classList.add("img_last");
-        }
+        if (j === 0) img_language.classList.add("img_push");
+        if (j === languages.length - 1) img_language.classList.add("img_last");
 
         language_div.appendChild(img_language);
     }
-
-    column_div.appendChild(language_div);
+    return language_div;
 }
 
-function CreateMobilePage(main_page_div, projects){
-    const row_div = document.createElement("div");
-    row_div.className = "row_mobile";
+function CreateProjects(project_div, projects){
     for(let i = 0; i < projects.length; i++){
-        const column_div = document.createElement("div");
-        column_div.className = "column";
-
         const project_hyperlink = document.createElement("a");
         project_hyperlink.href = projects[i].url;
-        project_hyperlink.target = "_self";
+        project_hyperlink.target = projects[i].target;
 
         const project_thumbnail = document.createElement("img");
         project_thumbnail.className = projects[i].image_class;
@@ -66,87 +44,30 @@ function CreateMobilePage(main_page_div, projects){
         const project_name = document.createElement("p");
         project_name.className = "hover_text";
         project_name.innerText = projects[i].name;
-        
+
         project_hyperlink.appendChild(project_thumbnail);
         project_hyperlink.appendChild(project_name);
 
-        column_div.appendChild(project_hyperlink);
-        set_project_languages(column_div, projects, i)
-        row_div.appendChild(column_div);
-    }
+        if (projects[i].languages && projects[i].languages.length > 0) {
+            const languageDiv = createLanguageDiv(projects[i].languages);
+            project_hyperlink.appendChild(languageDiv);
+        }
 
-    main_page_div.appendChild(row_div);
-}
-
-function CreateDesktopPage(main_page_div, projects){
-    const row_count = Math.ceil(projects.length/3);
-    let project_amount = projects.length;
-    let project_count = 0;
-    for(let i = 0; i < row_count; i++){
-        const row_div = document.createElement("div");
-        row_div.className = "row";
-        
-        for(let j = 0; j < 3; j++){
-            const current_project = j+i*3;
-            if(current_project == project_amount) break;
-
-            const column_div = document.createElement("div");
-            column_div.className = "column";
-    
-            const project_hyperlink = document.createElement("a");
-            project_hyperlink.href = projects[current_project].url;
-            project_hyperlink.target = projects[i].target;
-    
-            const project_thumbnail = document.createElement("img");
-            project_thumbnail.className = projects[current_project].image_class;
-            project_thumbnail.src = projects[current_project].image;
-    
-            const project_name = document.createElement("p");
-            project_name.className = "hover_text";
-            project_name.innerText = projects[current_project].name;
-            
-            project_hyperlink.appendChild(project_thumbnail);
-            project_hyperlink.appendChild(project_name);
-    
-            column_div.appendChild(project_hyperlink);
-            set_project_languages(column_div, projects, current_project)
-            row_div.appendChild(column_div);
-
-            project_count++;
-
-            main_page_div.appendChild(row_div);
-        }  
+        project_div.append(project_hyperlink);
     }
 }
 
 async function main(){
-    const response  = await fetch("resources/data/projects.json")
-    const json_string = await response.json()
-    const projects = json_string["projects"]
+    const response  = await fetch("resources/data/projects.json");
+    const json_string = await response.json();
+    const projects = json_string["projects"];
 
-    const main_page_div = document.createElement("div");
-    main_page_div.className = "main_page";
+    const projects_div = document.createElement("div");
+    projects_div.className = "grid";
 
-    const about_text =document.createElement("h1");
-    about_text.innerText = "About Me";
-    about_text.className = "about_header";
+    CreateProjects(projects_div, projects);
 
-    const text = document.createElement("p");
-    text.innerText = "Game developer and Computer engineering student. I'm a huge fan of voxels, low level programming and retro games. \n All my projects below!"
-    text.className = "about_text";
-
-    main_page_div.appendChild(about_text);
-    main_page_div.appendChild(text);
-
-    if(isMobile() || hasSmallScreen()){
-        CreateMobilePage(main_page_div, projects);
-        console.log("mobile");
-    }
-    else{
-        CreateDesktopPage(main_page_div, projects);
-    }
-
-    document.body.append(main_page_div);
+    document.body.append(projects_div);
 }
 
-main();
+main()
