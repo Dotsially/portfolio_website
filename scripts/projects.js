@@ -49,8 +49,8 @@ function CreateProjects(project_div, projects){
         project_hyperlink.appendChild(project_name);
 
         if (projects[i].languages && projects[i].languages.length > 0) {
-            const languageDiv = createLanguageDiv(projects[i].languages);
-            project_hyperlink.appendChild(languageDiv);
+            const language_div = createLanguageDiv(projects[i].languages);
+            project_hyperlink.appendChild(language_div);
         }
 
         project_div.append(project_hyperlink);
