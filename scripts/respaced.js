@@ -36,7 +36,7 @@ function main(){
 
     const about_text = document.createElement("p");
     about_text.className = "project_text";
-    about_text.innerHTML = "ReSpaced is a fast-paced first-person shooter where you master gun recoil to leap across platforms, battle various enemies, and upgrade your weapon to escape an overrun space station. <br>It currently has over 4000 downloads!</br>" +
+    about_text.innerHTML = "ReSpaced is a fast-paced first-person shooter where you master gun recoil to leap across platforms, battle various enemies, and upgrade your weapon to escape an overrun space station. <br>It currently has over 5000 downloads!</br>" +
     "<br></br>Made with:";
 
     const toolsList = document.createElement("ul");
