@@ -23,8 +23,6 @@ function CreateHomeProjects(home_projects_div, projects){
     }
 }
 
-
-
 async function main(){
     const response  = await fetch("resources/data/projects.json");
     const json_string = await response.json();
@@ -43,7 +41,14 @@ async function main(){
 
     home_div.append(home_img);
     home_div.append(home_name);
-    
+
+    const home_about_text = document.createElement("p");
+    home_about_text.innerText = "Game developer and Computer Science & Engineering student. I'm a huge fan of voxels, low level programming and retro games."
+    home_about_text.className = "home_about"
+
+    const home_recent_projects = document.createElement("p");
+    home_recent_projects.className = "home_header"
+    home_recent_projects.innerText = "Recent Projects:"
 
     const home_projects_div = document.createElement("div");
     home_projects_div.className = "home_projects_div";
@@ -51,6 +56,8 @@ async function main(){
     CreateHomeProjects(home_projects_div, projects);
 
     document.body.append(home_div); 
+    document.body.append(home_about_text);
+    document.body.append(home_recent_projects);
     document.body.append(home_projects_div);
 }
 
