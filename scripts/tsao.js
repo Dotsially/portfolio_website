@@ -48,22 +48,6 @@ function main(){
     store_page2.innerText = "Google Play";
     store_page2.className = "store_page";
 
-    const devcomment = document.createElement("h1");
-    devcomment.innerText = "Dev Commentary";  
-    devcomment.className = "project_header";
-
-
-    const commentary = document.createElement("p");
-    commentary.innerText = "A project mainly inspired by Vampire Survivors. I was the Artist / Technical Artist on the team but I also did quite a bit of programming\n" +
-    "I worked on the sound effect system, particles, enemy wave spawning, game feel and wrote quite a few shaders. \n" +
-    "Outside of that ALL the art in the game was created by me. I used a pixelation shader in Blender to render models into sprites sheets. \n" +
-    "This workflow was so fast I managed to create a lot of assets in 6 weeks! \n";
-    commentary.className = "project_text";
-
-    const img_bts = document.createElement("img");
-    img_bts.src = "resources/images/tsao_bts.png";
-    img_bts.className = "thumbnail";
-
     main_div.appendChild(title);
     main_div.appendChild(thumbnail);
     main_div.appendChild(about);
@@ -72,9 +56,6 @@ function main(){
     store_div.appendChild(store_page);
     store_div.appendChild(store_page2);
     main_div.appendChild(store_div);
-    main_div.appendChild(devcomment);
-    main_div.appendChild(commentary);
-    main_div.appendChild(img_bts);
     document.body.append(main_div); 
 }
 
